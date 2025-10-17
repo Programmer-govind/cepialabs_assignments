@@ -1,4 +1,4 @@
-# ToDo React App
+# ToDo React App (Part of CepiaLabs Assignment)
 
 # Live Link: https://gautam-govind-to-do-react-app.netlify.app
 ## Overview
