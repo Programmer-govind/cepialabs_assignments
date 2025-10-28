@@ -1,16 +1,39 @@
-# React + Vite
+# 🛍️ Products Explorer App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[Live Demo](https://gautam-govind-products-explorer.netlify.app/) • [GitHub Repo](https://github.com/Programmer-govind/cepialabs_assignments)
 
-Currently, two official plugins are available:
+## 🚀 Project Overview  
+**Products Explorer** is a modern React application built using Vite and the React library.  
+It fetches product data from the DummyJSON API and offers features like searching, filtering by category, pagination, dark mode, and favorites.  
+The purpose: build a production-ready frontend that demonstrates strong understanding of hooks, state management, performance optimizations, and good UX.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🧰 Features  
+- ✅ Fetches data dynamically using `fetch` and `async/await`  
+- 🔍 Search products by name in real-time  
+- 📂 Filter products by category  
+- 🔁 Pagination support (10 products per page)  
+- 🌙 Dark / Light mode toggle  
+- ❤️ Mark products as Favorites — persistent via `localStorage`  
+- 📱 Responsive grid layout suitable for desktop & mobile  
+- ⚙️ Performance optimizations using `useMemo` & `useCallback`
 
-## React Compiler
+## 🛠️ Tech Stack  
+- React (Functional Components + Hooks)  
+- Vite (fast bundler)  
+- JavaScript (ES6+)  
+- CSS Grid & Flexbox  
+- DummyJSON REST API ([dummyjson.com](https://dummyjson.com))  
+- Netlify for deployment
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🎬 Screenshots  
+![Home View](./screenshots/home-view.png)  
+![Dark Mode](./screenshots/dark-mode.png)  
+![Favorites](./screenshots/favorites.png)
 
-## Expanding the ESLint configuration
+> *Tip: Create a folder `screenshots/` in the root and add relevant images.*
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🧭 Getting Started (for Local Development)  
+1. Clone the repo:  
+   ```bash
+   git clone https://github.com/YOUR_USERNAME/products_explorer_app.git
+   cd products_explorer_app
