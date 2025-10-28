@@ -1,11 +1,11 @@
 import ProductItem from "./ProductItem"
 
-function ProductList({ products }) {
+function ProductList({ products, updateFavorites }) {
 
     return (
         <div className="products">
             {products.map((p) => (
-                <ProductItem key={p.id} product={p} />
+                <ProductItem key={p.id} product={p} updateFavorites={updateFavorites} />
             ))}
         </div>
     );

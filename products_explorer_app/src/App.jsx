@@ -26,7 +26,18 @@ function App() {
   });
   const [favorites, setFavorites] = useState(() => {
     const saved = localStorage.getItem('favorites');
-    return saved ? JSON.parse(saved) : [];
+    if (saved) {
+      return JSON.parse(saved);
+    }
+    // Migrate from old "favourites" key if it exists
+    const oldSaved = localStorage.getItem('favourites');
+    if (oldSaved) {
+      const migrated = JSON.parse(oldSaved);
+      localStorage.setItem('favorites', JSON.stringify(migrated));
+      localStorage.removeItem('favourites'); // Clean up old key
+      return migrated;
+    }
+    return [];
   });
   const [showFavorites, setShowFavorites] = useState(false);
 
@@ -41,19 +52,14 @@ function App() {
     localStorage.setItem('darkMode', JSON.stringify(darkMode));
   }, [darkMode]);
 
-  useEffect(() => {
-    const handleStorageChange = () => {
-      const saved = localStorage.getItem('favorites');
-      setFavorites(saved ? JSON.parse(saved) : []);
-    };
-
-    window.addEventListener('storage', handleStorageChange);
-    return () => window.removeEventListener('storage', handleStorageChange);
-  }, []);
-
   const handleShowFavorites = () => {
     setShowFavorites(!showFavorites);
     setPage(0);
+  };
+
+  const updateFavorites = (newFavorites) => {
+    setFavorites(newFavorites);
+    localStorage.setItem('favorites', JSON.stringify(newFavorites));
   };
 
   const fetchProducts = async () => {
@@ -131,10 +137,14 @@ function App() {
       ) : error ? (
         <ErrorMessage message={error} />
       ) : filteredProducts.length === 0 ? (
-        <NoResults />
+        showFavorites ? (
+          <h3 style={{ marginTop: "30px", color: "#555" }}>No favorites yet. Add some products to your favorites!</h3>
+        ) : (
+          <NoResults />
+        )
       ) : (
         <>
-        <ProductList products={filteredProducts} />
+        <ProductList products={filteredProducts} updateFavorites={updateFavorites} />
         {!showFavorites && (
           <div className="pagination">
             <button

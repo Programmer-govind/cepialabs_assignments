@@ -1,26 +1,26 @@
 import { useEffect, useState } from "react";
 
-function ProductItem({ product }) {
+function ProductItem({ product, updateFavorites }) {
 
-    const [isFavourite, setIsFavourite] = useState(false);
+    const [isFavorite, setIsFavorite] = useState(false);
 
     useEffect(() => {
-    const favourites = JSON.parse(localStorage.getItem("favourites")) || [];
-    setIsFavourite(favourites.some((p) => p.id === product.id));
+    const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+    setIsFavorite(favorites.some((p) => p.id === product.id));
   }, [product.id]);
 
-  const toggleFavourite = () => {
-    const favourites = JSON.parse(localStorage.getItem("favourites")) || [];
-    let updatedFavourites;
+  const toggleFavorite = () => {
+    const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+    let updatedFavorites;
 
-    if (isFavourite) {
-      updatedFavourites = favourites.filter((p) => p.id !== product.id);
+    if (isFavorite) {
+      updatedFavorites = favorites.filter((p) => p.id !== product.id);
     } else {
-      updatedFavourites = [...favourites, product];
+      updatedFavorites = [...favorites, product];
     }
 
-    localStorage.setItem("favourites", JSON.stringify(updatedFavourites));
-    setIsFavourite(!isFavourite);
+    updateFavorites(updatedFavorites);
+    setIsFavorite(!isFavorite);
   };
 
     return (
@@ -30,9 +30,9 @@ function ProductItem({ product }) {
             <p>Price: $ {product.price}</p>
             <p>Rating: {product.rating}</p>
             <button
-        onClick={toggleFavourite}
+        onClick={toggleFavorite}
         style={{
-          backgroundColor: isFavourite ? "crimson" : "#ccc",
+          backgroundColor: isFavorite ? "crimson" : "#ccc",
           color: "white",
           border: "none",
           padding: "6px 12px",
@@ -40,7 +40,7 @@ function ProductItem({ product }) {
           cursor: "pointer",
         }}
       >
-        {isFavourite ? "❤️ Remove" : "🤍 Favourite"}
+        {isFavorite ? "❤️ Remove" : "🤍 Favorite"}
       </button>
         </div>
     );
