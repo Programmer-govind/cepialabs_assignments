@@ -1,6 +1,6 @@
 # 🛍️ Products Explorer App
 
-[Live Demo](https://gautam-govind-products-explorer.netlify.app/) • [GitHub Repo](https://github.com/https://github.com/Programmer-govind/cepialabs_assignments.git)
+[Live Demo](https://gautam-govind-products-explorer.netlify.app/) • [GitHub Repo](https://github.com/Programmer-govind/cepialabs_assignments)
 
 ## 🚀 Project Overview  
 **Products Explorer** is a modern React application built using Vite and the React library.  
