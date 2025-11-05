@@ -26,14 +26,15 @@ The purpose: build a production-ready frontend that demonstrates strong understa
 - Netlify for deployment
 
 ## 🎬 Screenshots  
-![Home View](./screenshots/home-view.png)  
-![Dark Mode](./screenshots/dark-mode.png)  
-![Favorites](./screenshots/favorites.png)
-
-> *Tip: Create a folder `screenshots/` in the root and add relevant images.*
+![Home View](<img width="1831" height="957" alt="image" src="https://github.com/user-attachments/assets/3692011d-afda-46e2-b5f6-41a4e3868703" />
+)  
+![Dark Mode](<img width="1864" height="928" alt="image" src="https://github.com/user-attachments/assets/2fef0b3d-6a9b-4a40-97e9-0de09d8d5433" />
+)  
+![Favorites](<img width="1914" height="772" alt="image" src="https://github.com/user-attachments/assets/dc22d7fd-f899-44b7-946f-0d704ec0628f" />
+)
 
 ## 🧭 Getting Started (for Local Development)  
-1. Clone the repo:  
+Clone the repo:  
    ```bash
    git clone https://github.com/YOUR_USERNAME/products_explorer_app.git
    cd products_explorer_app
