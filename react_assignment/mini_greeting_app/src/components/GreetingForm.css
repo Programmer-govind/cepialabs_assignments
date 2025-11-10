@@ -1,0 +1,112 @@
+.greeting-form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.greeting-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-group input.error {
+    border-color: red;
+}
+
+.greeting-form button {
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.greeting-form button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.greeting-form button[type="submit"]:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.reset-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.password-strength {
+    font-size: 12px;
+    margin-top: 5px;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+.password-strength.weak {
+    background-color: #ffebee;
+    color: #d32f2f;
+}
+
+.password-strength.medium {
+    background-color: #fff3e0;
+    color: #f57c00;
+}
+
+.password-strength.strong {
+    background-color: #e8f5e8;
+    color: #388e3c;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: auto;
+    margin-right: 8px;
+}
+
+.field-hint {
+    font-size: 12px;
+    color: #666;
+    margin-top: 3px;
+    font-style: italic;
+}
+
+.field-success {
+    font-size: 12px;
+    color: #388e3c;
+    margin-top: 3px;
+    font-weight: 500;
+}

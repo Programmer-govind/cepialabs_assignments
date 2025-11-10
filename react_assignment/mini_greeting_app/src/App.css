@@ -1,0 +1,16 @@
+/* App styles */
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Center the entire app content */
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
