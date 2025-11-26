@@ -10,8 +10,8 @@ const Students = () => {
   useEffect(() => {
     const fetchStudents = async () => {
       try {
-        const response = await axios.get('https://jsonplaceholder.typicode.com/users');
-        setStudents(response.data);
+        const response = await axios.get('https://dummyjson.com/users');
+        setStudents(response.data.users);
       } catch (err) {
         setError('Failed to fetch students');
         console.error(err);

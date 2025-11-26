@@ -8,6 +8,7 @@ A React application to check weather information for cities using the OpenWeathe
 - Display current temperature, weather description, and icon
 - Show additional details like humidity, wind speed, and feels-like temperature
 - Loading and error states
+- Modern, professional UI with gradients, shadows, and responsive design
 
 ## Technologies Used
 

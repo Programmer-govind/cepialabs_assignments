@@ -11,13 +11,14 @@ const StudentCard = ({ student }) => {
 
   return (
     <div className="student-card">
-      <h3>{student.name}</h3>
+      <img src={student.image} alt={student.firstName} className="student-image" />
+      <h3>{student.firstName} {student.lastName}</h3>
       <p>Email: {student.email}</p>
-      <p>Role: {student.company?.name || 'N/A'}</p>
+      <p>Role: {student.company?.title || 'N/A'}</p>
       <Link to={`/students/${student.id}`}>
-        <button>View Profile</button>
+        <button className="btn btn-primary">View Profile</button>
       </Link>
-      <button onClick={handleAddFavorite}>Add to Favorites</button>
+      <button onClick={handleAddFavorite} className="btn btn-secondary">Add to Favorites</button>
     </div>
   );
 };

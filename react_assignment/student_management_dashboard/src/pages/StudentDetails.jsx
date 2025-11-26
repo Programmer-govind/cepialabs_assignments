@@ -14,7 +14,7 @@ const StudentDetails = () => {
   useEffect(() => {
     const fetchStudent = async () => {
       try {
-        const response = await axios.get(`https://jsonplaceholder.typicode.com/users/${id}`);
+        const response = await axios.get(`https://dummyjson.com/users/${id}`);
         setStudent(response.data);
       } catch (err) {
         setError('Failed to fetch student details');
@@ -38,14 +38,14 @@ const StudentDetails = () => {
 
   return (
     <div className="student-details">
-      <h2>{student.name}</h2>
-      <img src={`https://via.placeholder.com/150`} alt={student.name} />
+      <img src={student.image} alt={student.firstName} className="student-detail-image" />
+      <h2>{student.firstName} {student.lastName}</h2>
       <p>Email: {student.email}</p>
       <p>City: {student.address?.city}</p>
       <p>Company: {student.company?.name}</p>
-      <button onClick={handleAddFavorite}>Add to Favorites</button>
+      <button onClick={handleAddFavorite} className="btn btn-secondary">Add to Favorites</button>
       <Link to="/students">
-        <button>Back to Students</button>
+        <button className="btn btn-primary">Back to Students</button>
       </Link>
     </div>
   );
